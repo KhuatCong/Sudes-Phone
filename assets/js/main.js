@@ -1,12 +1,19 @@
 $(function () {
-    // $('.slide-category').slick({
-    //     dots: false,
-    //     arrows:false,
-    //     infinite: false,
-    //     speed: 300,
-    //     slidesToShow: 8,
-    //     slidesToScroll:1,
-    // });
+    $('.slide-banner').slick({
+        slidesToShow:1,
+        slidesToScroll:1,
+        dots:false,
+        prevArrow: $('.prev-banner'),
+        nextArrow: $('.next-banner'),
+    });
+
+    $('.slide-product').slick({
+        slidesToShow:4,
+        slidesToScroll:1,
+        dots:false,
+        prevArrow: $('.prev-banner'),
+        nextArrow: $('.next-banner'),
+    });
 
     $('.bar-mobile').click(function(){
         $('.box-menu').toggleClass('current');
