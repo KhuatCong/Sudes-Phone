@@ -534,22 +534,22 @@
 
         <div class="news-product">
             <div class="container-lg">
-                <div class="row three-banner">
-                    <div class="col-md-4 col-sm-12">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
                         <div class="item">
                             <a href="">
                                 <img src="assets/images/banner/img_3banner_1.webp" alt="">
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-12">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
                         <div class="item">
                             <a href="">
                                 <img src="assets/images/banner/img_3banner_2.webp" alt="">
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-12">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
                         <div class="item">
                             <a href="">
                                 <img src="assets/images/banner/img_3banner_3.webp" alt="">
@@ -618,26 +618,27 @@
                             </div>
                         </div>
                         <div class="count-down">
-                            <div class="box-time">
+                            <div class="box-time" id="box-time">
                                 <div class="item">
-                                    <span class="d-block">24</span>
+                                    <span class="d-block" id="days"></span>
                                     <label>Ngày</label>
                                 </div>
                                 <div class="item">
-                                    <span class="d-block">24</span>
+                                    <span class="d-block" id="hours"></span>
                                     <label>Giờ</label>
                                 </div>
                                 <div class="item">
-                                    <span class="d-block">24</span>
+                                    <span class="d-block" id="minutes"></span>
                                     <label>Phút</label>
                                 </div>
                                 <div class="item">
-                                    <span class="d-block">24</span>
+                                    <span class="d-block" id="seconds"></span>
                                     <label>Giây</label>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="box-product-sale">
                         <div class="slide-product">
                             <div class="item">
@@ -645,18 +646,28 @@
                                     <a href="">
                                         <img src="assets/images/products/14-plus-xanh-221119023152-221119.webp" alt="">
                                     </a>
-                                    
                                 </div>
                                 <div class="body">
                                     <a href="" class="name-product">
                                         iPhone 12 64GB - Chính hãng VN/A - MGJ73VN/A
                                     </a>
-                                    <div class="price"><del>43.990.000đ</del></div>
-                                    <div class="discount">35.000.000đ</div>
-                                    <div class="combo">Thu cũ đổi mới: Thu giá cao trợ giá đến 90%</div>
+                                    <div class="price"><del></del></div>
+                                    <div class="discount">Sắp về hàng</div>
+                                    <div class="combo">Thay đổi về thiết kế là dễ nhận thấy nhất trên iPhone 12, đó là
+                                        sự pha trộn giữa mới và cũ, khi kết hợp giữa sự vuông vức, chắc chắn từ thời
+                                        iPhone 5, với những công nghệ mới nhất hiện tại như FaceID, màn hình tràn viền
+                                        của năm 2020…</div>
                                     <div class="count-product"></div>
                                 </div>
                                 <span class="dis">Giảm 41%</span>
+                                <span class="setting">
+                                    <a href="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tùy chọn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                                            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"></path>
+                                            <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"></path>
+                                        </svg>
+                                    </a>
+                                </span>
                             </div>
                             <div class="item">
                                 <div class="img">
@@ -747,7 +758,20 @@
                     </div>
 
                     <div class="view-more">
-                        <a href="" class="btn btn-view">Xem thêm</a>
+                        <a href="" class="btn btn-view">Xem tất cả <i class="fa-solid fa-chevron-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="featured-category">
+            <div class="container">
+                <div class="title">
+                    Danh mục nổi bật
+                </div>
+                <div class="list-category">
+                    <div class="row">
+
                     </div>
                 </div>
             </div>
