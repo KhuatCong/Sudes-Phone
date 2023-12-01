@@ -891,6 +891,7 @@ header {
     }
 
     .hot-sale {
+        padding-bottom: 20px;
         .box {
             padding-bottom: 20px;
             background: linear-gradient(180deg, #BF1E2E 0%, #cc0c09 50%, #fa2c29 100%);
@@ -1106,6 +1107,64 @@ header {
                     &:hover {
                         background-color: black;
                         border: 1px solid black;
+                    }
+                }
+            }
+        }
+    }
+
+    .featured-category{
+        padding-bottom: 20px;
+        .title{
+            font: {
+                size: 24px;
+                weight:500;
+            }
+            text-transform: uppercase;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .list-category{
+            .row{
+                @media screen and (max-width:993px) {
+                    flex-wrap: nowrap;
+                    overflow-x: auto;
+                    scroll-snap-type: x mandatory;
+    
+                    .col-xs-12 {
+                        flex: 0 0 40%;
+                        max-width: 40%;
+                        min-width: 40%;
+                    }
+                }
+                .item{
+                    padding: 20px;
+                    background-color: #f1f1f1;
+                    display: block;
+                    border-radius: 10px;
+                    text-align: center;
+                    
+                    &:hover{
+                        .name-category{
+                            color: #ffffff;
+                        }
+                        background: linear-gradient(180deg, #141414 0%, #202022 50%, #47474f 100%);
+                        img{
+                            transform: scale(1.1);
+                            transition: 0.3s;
+                        }
+                    }
+                    .img{
+                        img{
+                            aspect-ratio: 1;
+                            transition: 0.3s;
+
+                        }
+                        margin-bottom: 10px;
+                    }
+                    .name-category{
+                        color: black;
+                        font-weight: 500;
                     }
                 }
             }
