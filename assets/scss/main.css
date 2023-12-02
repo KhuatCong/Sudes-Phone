@@ -929,4 +929,228 @@ header .category-header .list-category .category li .box-phukien li a:hover {
 .content-body .featured-category .list-category .row .item .name-category {
   color: black;
   font-weight: 500;
+}
+.content-body .product-iphone {
+  padding: 20px 0;
+}
+.content-body .product-iphone .iphone .title {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.content-body .product-iphone .iphone .box .list-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .content-body .product-iphone .iphone .box .list-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    justify-content: start;
+  }
+  .content-body .product-iphone .iphone .box .list-nav .col-xs-12 {
+    flex: 0 0 40%;
+    max-width: 40%;
+    min-width: 40%;
+  }
+}
+.content-body .product-iphone .iphone .box .list-nav li {
+  padding: 0 15px;
+  cursor: pointer;
+  position: relative;
+}
+.content-body .product-iphone .iphone .box .list-nav li .nav-link {
+  background-color: transparent;
+  color: black;
+  border-radius: 0 !important;
+}
+.content-body .product-iphone .iphone .box .list-nav li .active {
+  border-bottom: 3px solid #000000;
+}
+.content-body .product-iphone .iphone .box .list-nav li::after {
+  content: "/";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: -5px;
+}
+.content-body .product-iphone .iphone .box .list-nav li:last-child::after {
+  content: "";
+}
+.content-body .product-iphone .iphone .box .list-nav li span {
+  position: relative;
+  font-weight: 500;
+}
+.content-body .product-iphone .iphone .box .list-nav li span:hover {
+  color: red;
+}
+.content-body .product-iphone .iphone .box .list-content {
+  padding: 10px 0;
+}
+@media screen and (max-width: 768px) {
+  .content-body .product-iphone .iphone .box .list-content .row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .content-body .product-iphone .iphone .box .list-content .row .col-xs-12 {
+    flex: 0 0 70%;
+    max-width: 70%;
+    min-width: 70%;
+  }
+}
+.content-body .product-iphone .iphone .box .list-content .row .item {
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 6px 0px rgba(50, 50, 93, 0.15), 1px 1px 5px rgba(0, 0, 0, 0.05);
+}
+.content-body .product-iphone .iphone .box .list-content .row .item .setting {
+  position: absolute;
+  right: 10px;
+  bottom: 80px;
+}
+.content-body .product-iphone .iphone .box .list-content .row .item .setting a {
+  color: #ffffff;
+  background-color: black;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px 8px 6px 8px;
+}
+.content-body .product-iphone .iphone .box .list-content .row .item .setting a:hover {
+  background-color: red;
+}
+.content-body .product-iphone .iphone .box .list-content .row .item:hover .img a img {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.content-body .product-iphone .iphone .box .list-content .row .item .dis {
+  color: #ffffff;
+  background-color: red;
+  font-weight: 600;
+  padding: 2px 6px;
+  font-size: 14px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+.content-body .product-iphone .iphone .box .list-content .row .item .img {
+  overflow: hidden;
+}
+.content-body .product-iphone .iphone .box .list-content .row .item .img a img {
+  width: 100%;
+  aspect-ratio: 1;
+  transition: 0.3s;
+}
+.content-body .product-iphone .iphone .box .list-content .row .item .body .name-product {
+  color: black;
+  margin-bottom: 5px;
+  display: block;
+  height: 48px !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.content-body .product-iphone .iphone .box .list-content .row .item .body .name-product:hover {
+  color: red;
+}
+.content-body .product-iphone .iphone .box .list-content .row .item .body .price {
+  opacity: 0.5;
+  font-size: 14px;
+  margin-bottom: 5px;
+  height: 21px;
+}
+.content-body .product-iphone .iphone .box .list-content .row .item .body .discount {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.content-body .product-iphone .iphone .box .list-content .row .item .body .combo {
+  background-color: #e8e8e8;
+  padding: 5px;
+  border-radius: 5px;
+  height: 58px !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.content-body .product-iphone .iphone .view-more {
+  text-align: center;
+  margin-top: 20px;
+}
+.content-body .product-iphone .iphone .view-more .btn-view {
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 6px 30px;
+}
+.content-body .product-iphone .iphone .view-more .btn-view:hover {
+  background-color: red;
+  border: 1px solid red;
+  color: #ffffff;
+}
+.content-body .banner-new-product {
+  padding: 30px 0;
+  overflow: hidden;
+  background: url(//bizweb.dktcdn.net/100/480/632/themes/900313/assets/section_banner_new_bg.jpg?1700210069064) center/cover no-repeat;
+}
+.content-body .banner-new-product .title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.content-body .banner-new-product .col-left {
+  display: flex;
+  align-items: center;
+}
+.content-body .banner-new-product .col-left .product-content .sub-title {
+  color: red;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 10px;
+}
+.content-body .banner-new-product .col-left .product-content h3 {
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.content-body .banner-new-product .col-left .product-content .des {
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.content-body .banner-new-product .col-left .product-content .view-more .btn-view {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  background-color: #000000;
+  padding: 6px 30px;
+}
+.content-body .banner-new-product .col-left .product-content .view-more .btn-view:hover {
+  background-color: red;
+  border: 1px solid red;
+}
+.content-body .banner-new-product .col-left .product-content .view-more .btn-view:hover i {
+  transform: translateX(5px);
+  transition-duration: 0.4s;
+}
+.content-body .banner-new-product .col-left .content .video-content .loaded {
+  visibility: visible !important;
+  animation-name: fadeInUp, snakeItem;
+  animation-duration: 1s, 3s;
+  animation-timing-function: ease, ease;
+  animation-direction: normal, alternate;
+  animation-fill-mode: both, both;
+  animation-iteration-count: 1, infinite;
+  animation-delay: 0.5s, 1s;
 }/*# sourceMappingURL=main.css.map */
