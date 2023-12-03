@@ -1,4 +1,5 @@
 $(function () {
+
     $('.slide-banner').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -31,16 +32,7 @@ $(function () {
                     infinite: true,
                     dots: false
                 }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false
-                }
-            },
+            }
         ]
     });
 
@@ -93,3 +85,76 @@ function newYear() {
 setInterval(function () {
     newYear()
 }, 1000)
+
+$(window).on('resize', function () {
+    var viewportWidth = jQuery(window).width();
+
+    if (viewportWidth < 768) {
+        $('.slide-product').slick('unslick');
+    } else {
+        $('.slide-product').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            dots: false,
+            prevArrow: $('.prev-banner'),
+            nextArrow: $('.next-banner'),
+            responsive: [
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                }
+                
+            ]
+        });
+    }
+});
+$(window).on('load', function () {
+    var viewportWidth = jQuery(window).width();
+
+    if (viewportWidth < 768) {
+        $('.slide-product').slick('unslick');
+    } else {
+        $('.slide-product').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            dots: false,
+            prevArrow: $('.prev-banner'),
+            nextArrow: $('.next-banner'),
+            responsive: [
+                {
+                    breakpoint: 993,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                }
+                
+            ]
+        });
+    }
+});
