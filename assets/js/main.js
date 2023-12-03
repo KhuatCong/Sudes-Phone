@@ -1,5 +1,61 @@
 $(function () {
 
+$('.list-news').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dots: false,
+    prevArrow: $('.prev-news'),
+    nextArrow: $('.next-news'),
+    responsive: [
+        {
+            breakpoint: 993,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false
+            }
+        }
+    ]
+});
+
+$('.list-cus').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    dots: false,
+    prevArrow: $('.prev-news'),
+    nextArrow: $('.next-news'),
+    responsive: [
+        {
+            breakpoint: 993,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false
+            }
+        }
+    ]
+});
+
     $('.slide-banner').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -12,8 +68,8 @@ $(function () {
         slidesToShow: 4,
         slidesToScroll: 1,
         dots: false,
-        prevArrow: $('.prev-banner'),
-        nextArrow: $('.next-banner'),
+        prevArrow: $('.prev-hot'),
+        nextArrow: $('.next-hot'),
         responsive: [
             {
                 breakpoint: 993,
