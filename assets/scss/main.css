@@ -960,6 +960,18 @@ header .category-header .list-category .category li .box-phukien li a:hover {
     text-align: center;
   }
 }
+@media screen and (max-width: 576px) {
+  .content-body .product-iphone .iphone .box .list-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  .content-body .product-iphone .iphone .box .list-nav .col-xs-12 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-width: 50%;
+  }
+}
 .content-body .product-iphone .iphone .box .list-nav li {
   padding: 0 15px;
   cursor: pointer;
