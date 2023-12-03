@@ -762,19 +762,6 @@ header .category-header .list-category .category li .box-phukien li a:hover {
   padding: 20px;
   position: relative;
 }
-@media screen and (max-width: 768px) {
-  .content-body .hot-sale .box .box-product-sale .slide-product {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-  .content-body .hot-sale .box .box-product-sale .slide-product .col-xs-12 {
-    flex: 0 0 60%;
-    max-width: 60%;
-    min-width: 60%;
-  }
-}
 .content-body .hot-sale .box .box-product-sale .slide-product .slick-slide {
   margin: 0 10px;
 }
@@ -787,11 +774,6 @@ header .category-header .list-category .category li .box-phukien li a:hover {
   border-radius: 5px;
   overflow: hidden;
   position: relative;
-}
-@media screen and (max-width: 768px) {
-  .content-body .hot-sale .box .box-product-sale .slide-product .item {
-    margin-right: 10px;
-  }
 }
 .content-body .hot-sale .box .box-product-sale .slide-product .item .setting {
   position: absolute;

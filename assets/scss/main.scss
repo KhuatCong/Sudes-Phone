@@ -955,18 +955,7 @@ header {
 
                 .slide-product {
 
-                    @media screen and (max-width:768px) {
-                        display: flex;
-                        flex-wrap: nowrap;
-                        overflow-x: auto;
-                        scroll-snap-type: x mandatory;
-
-                        .col-xs-12 {
-                            flex: 0 0 60%;
-                            max-width: 60%;
-                            min-width: 60%;
-                        }
-                    }
+                    
 
                     .slick-slide {
                         margin: 0 10px;
@@ -982,9 +971,6 @@ header {
                         border-radius: 5px;
                         overflow: hidden;
                         position: relative;
-                        @media screen and (max-width:768px) {
-                            margin-right: 10px;
-                        }
 
                         .setting {
                             a {
