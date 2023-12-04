@@ -2177,7 +2177,7 @@ header {
         }
     }
 
-    .gioithieu {
+    .box-bread {
         .head {
             background: #fff;
             margin-bottom: 20px;
@@ -2201,7 +2201,7 @@ header {
         }
 
         .content {
-            margin: 40px 0;
+            // margin: 40px 0;
 
             .title {
                 text-transform: uppercase;
@@ -2215,6 +2215,69 @@ header {
                 span{
                     font-weight: bold;
                 }
+            }
+            .box-content{
+                .box-left{
+                    .des{
+                        margin-bottom: 10px;
+                        line-height: 1.8;
+                    }
+                    .list{
+                        margin-bottom: 10px;
+                        line-height: 1.6;
+                        span{
+                            font-weight: bold;
+                        }
+                        a{
+                            color: black;
+                            &:hover{
+                                color: red;
+                            }
+                        }
+                    }
+                    .box-form{
+                        background-color: #f5f5f5;
+                        border-radius: 12px;
+                        padding: 15px;
+                        .title{
+                            font: {
+                                size: 16px;
+                                weight:500;
+                            }
+                        }
+                        .form-mail{
+                            .btn-send{
+                                margin-top: 10px;
+                                background-color: #000000;
+                                color: #ffffff;
+
+                                &:hover{
+                                    background-color: red;
+                                    
+                                }
+                            }
+                        }
+                    }
+                    .list-address{
+                        background-color: #ffffff;
+                        height: 400px;
+                        overflow-y: scroll;
+
+                        .info{
+                            b{
+                                color: #000000;
+                            }
+                            span{
+                                color: #47474f;
+                            }
+                            &:hover{
+                                background-color: #e8e8e8;
+                            }
+                            border-bottom: 1px solid #e8e8e8;
+                        }
+                    }
+                }
+
             }
         }
     }
