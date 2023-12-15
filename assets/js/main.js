@@ -32,8 +32,8 @@ $('.list-cus').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
     dots: false,
-    prevArrow: $('.prev-news'),
-    nextArrow: $('.next-news'),
+    prevArrow: $('.prev-cus'),
+    nextArrow: $('.next-cus'),
     responsive: [
         {
             breakpoint: 993,

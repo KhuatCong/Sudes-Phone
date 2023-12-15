@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo swiper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .swiper-slide {
+            border: 5px solid red;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media screen and (max-width:993px) {
+            .swiper-wrapper {
+                overflow-x: auto;
+            }
+        }
+
+        .swiper-button-next::after {
+            font-size: 24px !important;
+        }
+
+        .swiper-button-prev::after {
+            font-size: 24px !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                Home
+            </div>
+            <div class="swiper-slide">
+                About
+            </div>
+            <div class="swiper-slide">
+                News
+            </div>
+            <div class="swiper-slide">
+                Product
+            </div>
+            <div class="swiper-slide">
+                Account
+            </div>
+            <div class="swiper-slide">
+                News
+            </div>
+            <div class="swiper-slide">
+                Product
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1.5,
+            spaceBetween: 10,
+            allowSlideNext: false,
+            allowSlidePrev: false,
+            navigation: {
+                enabled:false
+            },
+            breakpoints: {
+                // từ 993px trở lên
+                993: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    allowSlideNext: true,
+                    allowSlidePrev: true,
+                    navigation: {
+                        enabled:true,
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
