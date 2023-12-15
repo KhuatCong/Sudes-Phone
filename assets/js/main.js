@@ -1,60 +1,60 @@
 $(function () {
 
-$('.list-news').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    dots: false,
-    prevArrow: $('.prev-news'),
-    nextArrow: $('.next-news'),
-    responsive: [
-        {
-            breakpoint: 993,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false
+    $('.list-news').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        prevArrow: $('.prev-news'),
+        nextArrow: $('.next-news'),
+        responsive: [
+            {
+                breakpoint: 993,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
             }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false
-            }
-        }
-    ]
-});
+        ]
+    });
 
-$('.list-cus').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    dots: false,
-    prevArrow: $('.prev-cus'),
-    nextArrow: $('.next-cus'),
-    responsive: [
-        {
-            breakpoint: 993,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false
+    $('.list-cus').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        dots: false,
+        prevArrow: $('.prev-cus'),
+        nextArrow: $('.next-cus'),
+        responsive: [
+            {
+                breakpoint: 993,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
             }
-        },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false
-            }
-        }
-    ]
-});
+        ]
+    });
 
     $('.slide-banner').slick({
         slidesToShow: 1,
@@ -191,7 +191,7 @@ setInterval(function () {
 //                         dots: false
 //                     }
 //                 }
-                
+
 //             ]
 //         });
 //     }
@@ -202,39 +202,63 @@ var citis = document.getElementById("city");
 var districts = document.getElementById("district");
 var wards = document.getElementById("ward");
 var Parameter = {
-  url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json", 
-  method: "GET", 
-  responseType: "application/json", 
+    url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
+    method: "GET",
+    responseType: "application/json",
 };
 var promise = axios(Parameter);
 promise.then(function (result) {
-  renderCity(result.data);
+    renderCity(result.data);
 });
 
 function renderCity(data) {
-  for (const x of data) {
-    citis.options[citis.options.length] = new Option(x.Name, x.Id);
-  }
-  citis.onchange = function () {
-    district.length = 1;
-    ward.length = 1;
-    if(this.value != ""){
-      const result = data.filter(n => n.Id === this.value);
-
-      for (const k of result[0].Districts) {
-        district.options[district.options.length] = new Option(k.Name, k.Id);
-      }
+    for (const x of data) {
+        citis.options[citis.options.length] = new Option(x.Name, x.Id);
     }
-  };
-  district.onchange = function () {
-    ward.length = 1;
-    const dataCity = data.filter((n) => n.Id === citis.value);
-    if (this.value != "") {
-      const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
+    citis.onchange = function () {
+        district.length = 1;
+        ward.length = 1;
+        if (this.value != "") {
+            const result = data.filter(n => n.Id === this.value);
 
-      for (const w of dataWards) {
-        wards.options[wards.options.length] = new Option(w.Name, w.Id);
-      }
-    }
-  };
+            for (const k of result[0].Districts) {
+                district.options[district.options.length] = new Option(k.Name, k.Id);
+            }
+        }
+    };
+    district.onchange = function () {
+        ward.length = 1;
+        const dataCity = data.filter((n) => n.Id === citis.value);
+        if (this.value != "") {
+            const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
+
+            for (const w of dataWards) {
+                wards.options[wards.options.length] = new Option(w.Name, w.Id);
+            }
+        }
+    };
+}
+
+// back to top
+if ($('#back-to-top').length) {
+    var scrollTrigger = 100, //khoảng cách đến khi bắt đầu hiện nút (px)
+        backToTop = function () {
+            var scrollTop = $(window).scrollTop(); //lấy khoảng cách scroll hiện tại tính lên Top
+            if (scrollTop > scrollTrigger) {
+                $('#back-to-top').addClass('show-top');
+            } else {
+                $('#back-to-top').removeClass('show-top');
+            }
+        };
+    backToTop();
+    $(window).on('scroll', function () {
+        backToTop(); //gọi function 'backToTop()' mỗi khi người dùng cuộn trang
+    });
+    $('#back-to-top').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 200); //thời gian kéo lên top tính bằng mili giây 
+    });
+
 }

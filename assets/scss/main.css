@@ -2071,4 +2071,28 @@ footer .mid-footer .box .list-payment span {
   display: inline-block;
   margin-right: 10px;
   margin-bottom: 10px;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 60px;
+  right: 40px;
+  z-index: 9999;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 35px;
+  background: #b9b9b9;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+#back-to-top:hover {
+  background: #ffc107;
+}
+
+#back-to-top.show-top {
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */
