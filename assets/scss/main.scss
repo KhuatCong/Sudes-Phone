@@ -111,7 +111,7 @@ header {
         .right-header {
             display: flex;
             flex: 1;
-            align-content: center;
+            align-items: center;
             justify-content: space-between;
 
             @media screen and (max-width:992px) {
@@ -120,111 +120,123 @@ header {
                 right: 12px;
             }
 
-            .map-header {
-                display: flex;
-                align-items: center;
-                color: #ffffff;
-                font-size: 12px;
-                background-color: rgba(255, 255, 255, 0.2);
-                padding: 6px 8px;
-                line-height: 1.2;
-                border-radius: 3px;
+            .right-map {
 
-                @media screen and (max-width:1200px) {
-                    display: none;
-                }
+                .map-header {
+                    display: flex;
+                    align-items: center;
+                    color: #ffffff;
+                    font-size: 12px;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    padding: 6px 8px;
+                    // line-height: 1.2;
+                    border-radius: 3px;
 
-                &:hover {
-                    background-color: rgba(255, 255, 255, 0.1);
-                }
+                    @media screen and (max-width:1200px) {
+                        display: none;
+                    }
 
-                .icon {
-                    margin-right: 4px;
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.1);
+                    }
+
+                    .icon {
+                        margin-right: 4px;
+                    }
                 }
             }
 
-            .phone-header {
-                display: flex;
-                align-items: center;
-                color: #ffffff;
-                font-size: 12px;
-                line-height: 1.3;
-                border-radius: 3px;
+            .right-phone {
 
-                &:hover {
-                    color: rgba(255, 255, 255, 0.8);
-                }
+                .phone-header {
+                    display: flex;
+                    align-items: center;
+                    color: #ffffff;
+                    font-size: 12px;
+                    // line-height: 1.3;
+                    border-radius: 3px;
 
-                .icon {
-                    margin-right: 8px;
-                }
-
-                @media screen and (max-width:992px) {
-                    display: none;
-                }
-            }
-
-            .user-header {
-                display: flex;
-                align-items: center;
-                color: #ffffff;
-                font-size: 12px;
-                line-height: 1.3;
-                border-radius: 3px;
-                position: relative;
-
-                &::before {
-                    position: absolute;
-                    content: '';
-                    right: 0px;
-                    top: 100%;
-                    width: 100%;
-                    height: 12px;
-                }
-
-                &:hover {
-                    .box-user {
-                        display: block;
+                    &:hover {
+                        color: rgba(255, 255, 255, 0.8);
                     }
 
-                    color: rgba(255, 255, 255, 0.8);
-                }
-
-                .icon {
-                    margin-right: 10px;
-                    position: relative;
-
-                    i {
-                        &:last-child {
-                            position: absolute;
-                            right: -80px;
-                            bottom: -6px;
-
-                            @media screen and (max-width:992px) {
-                                right: -15px;
-                                bottom: 2px;
-                            }
-                        }
+                    .icon {
+                        margin-right: 8px;
                     }
 
-                    @media screen and (max-width:992px) {
-                        margin-right: 30px;
-                    }
-                }
-
-                .content {
                     @media screen and (max-width:992px) {
                         display: none;
                     }
                 }
+            }
 
+            .right-user {
+                position: relative;
+                &:hover{
+                    .box-user{
+                        display: block;
+                    }
+                }
+
+                .user-header {
+                    display: flex;
+                    align-items: center;
+                    color: #ffffff;
+                    font-size: 12px;
+                    // line-height: 1.3;
+                    border-radius: 3px;
+                    position: relative;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        right: 0px;
+                        top: 100%;
+                        width: 100%;
+                        height: 20px;
+                    }
+
+                    &:hover{
+                        color: rgba(255, 255, 255, 0.8);
+                    }
+
+                    .icon {
+                        margin-right: 10px;
+                        position: relative;
+
+                        i {
+                            &:last-child {
+                                position: absolute;
+                                right: -80px;
+                                bottom: -6px;
+
+                                @media screen and (max-width:992px) {
+                                    right: -15px;
+                                    bottom: 2px;
+                                }
+                            }
+                        }
+
+                        @media screen and (max-width:992px) {
+                            margin-right: 30px;
+                        }
+                    }
+
+                    .content {
+                        @media screen and (max-width:992px) {
+                            display: none;
+                        }
+                    }
+
+                }
                 .box-user {
                     background-color: #ffffff;
                     color: black;
                     position: absolute;
-                    top: calc(100% + 12px);
+                    // top: calc(100% + 12px);
+                    top: 150%;
                     right: 0;
-                    width: 200px;
+                    width: 220px;
                     display: none;
                     z-index: 999;
                     border-radius: 5px;
@@ -233,19 +245,23 @@ header {
 
                     li {
                         cursor: pointer;
-                        padding: 4px 10px;
-                        font-size: 14px;
                         margin: 6px 0;
-
-                        svg {
-                            margin-right: 5px;
+                        a{
+                            font-size: 14px;
+                            padding: 4px 10px;
+                            display: block;
+                            color: #000000;
+                            svg {
+                                margin-right: 5px;
+                            }
+                            &:hover {
+                                border-radius: 4px;
+                                color: white;
+                                background-color: black;
+                            }
                         }
 
-                        &:hover {
-                            border-radius: 4px;
-                            color: white;
-                            background-color: black;
-                        }
+
                     }
 
                     &:before {
@@ -254,78 +270,231 @@ header {
                         border: 10px solid transparent;
                         border-bottom-color: #fff;
                         content: "";
-                        right: 40px;
+                        right: 18px;
                         top: -18px;
                     }
                 }
             }
 
-            .cart-header {
-                display: flex;
-                align-items: center;
-                color: #ffffff;
-                font-size: 12px;
-                line-height: 1.3;
-                border-radius: 3px;
+            .right-cart {
                 position: relative;
 
-                &::before {
-                    position: absolute;
-                    content: '';
-                    right: 0px;
-                    top: 100%;
-                    width: 100%;
-                    height: 12px;
-                }
-
-                &:hover {
-                    color: rgba(255, 255, 255, 0.8);
-
-                    .cart {
-                        display: block;
+                &:hover{
+                    .cart{
+                        @media screen and (min-width:992px) {
+                            display: block;
+                        }
                     }
                 }
-
-                .icon {
+                .cart-header {
+                    display: flex;
+                    align-items: center;
+                    color: #ffffff;
+                    font-size: 12px;
+                    // line-height: 1.3;
+                    border-radius: 3px;
                     position: relative;
-                    margin-right: 8px;
 
-                    span {
+                    &::before {
                         position: absolute;
-                        top: -10px;
-                        left: 16px;
-                        background-color: red;
-                        border-radius: 50%;
-                        padding: 0px 5px;
+                        content: '';
+                        right: 0px;
+                        top: 100%;
+                        width: 100%;
+                        height: 30px;
                     }
-                }
 
-                .content {
+                    &:hover{
+                        color: rgba(255, 255, 255, 0.8);
 
-                    @media screen and (max-width:992px) {
-                        display: none;
+                        
+                    }
+
+                    .icon {
+                        position: relative;
+                        margin-right: 8px;
+
+                        span {
+                            position: absolute;
+                            top: -10px;
+                            left: 16px;
+                            background-color: red;
+                            border-radius: 50%;
+                            padding: 0px 5px;
+                        }
+                    }
+
+                    .content {
+                        @media screen and (max-width:992px) {
+                            display: none;
+                        }
+
                     }
 
                 }
 
                 .cart {
+
                     position: absolute;
-                    top: calc(100% + 12px);
+                    // top: calc(100% + 12px);
+                    top: 250%;
                     right: 0;
-                    z-index: 999;
+                    z-index: 99999;
                     text-align: center;
                     background-color: white;
-                    padding: 10px;
+                    // padding: 10px;
                     color: black;
                     border-radius: 5px;
-                    width: 300px;
+                    width: 400px;
                     display: none;
                     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
                     .content-cart {
-                        i {
-                            font-size: 48px;
-                            margin-bottom: 20px;
+                        .empty-cart {
+                            display: none;
+
+                            i {
+                                font-size: 48px;
+                                margin-bottom: 20px;
+                            }
+                        }
+
+                        .no-empty-cart {
+                            .box {
+                                text-align: left;
+                                .head {
+                                    padding:4px 10px;
+                                    font: {
+                                        size: 14px;
+                                        weight: 400;
+                                    }
+                                    text-transform: uppercase;
+                                    border-bottom: 1px solid #cccccc;
+                                }
+
+                                .body {
+                                    padding:0 10px;
+                                    .item {
+                                        display: flex;
+                                        padding: 10px 0;
+                                        border-bottom: 1px solid #cccccc;
+                                        .img {
+                                            min-width: 20%;
+                                            max-width: 20%;
+                                            height: 20%;
+                                            margin-right: 15px;
+                                            flex: 1;
+                                            border: 1px solid #cccccc;
+                                            a {
+                                                img {
+                                                    width: 100%;
+                                                    aspect-ratio: 1;
+                                                    object-fit: cover;
+                                                }
+                                            }
+                                        }
+                                        .info{
+                                            position: relative;
+                                            font-size: 14px;
+
+                                            .name{
+                                                color: #000000;
+                                                text-wrap: wrap;
+                                                display: inline-block;
+                                                width: 90%;
+                                                &:hover{
+                                                    color: #cc0c09;
+                                                }
+                                            }
+                                            .mau{
+                                                color: #b9b9b9;
+                                                margin-bottom: 5px;
+                                            }
+                                            .count-amount{
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                                .amount{
+                                                    button{
+                                                        border: 1px solid #e5e5e5;
+                                                        border-color: #e5e5e5;
+                                                        color: #222;
+                                                        line-height: 26px;
+                                                        padding: 0;
+                                                        margin: 0;
+                                                        width: 28px;
+                                                        background-color: #fff;
+                                                        height: 28px;
+                                                        float: left;
+                                                    }
+                                                    input{
+                                                        display: inline-block;
+                                                        padding: 0;
+                                                        text-align: center;
+                                                        border-radius: 0;
+                                                        width: 35px;
+                                                        min-height: 28px;
+                                                        border: 1px solid #e5e5e5;
+                                                        color: #222;
+                                                        height: 28px;
+                                                        font-size: 14px;
+                                                        margin: 0;
+                                                        float: left;
+                                                        border-left: none;
+                                                        border-right: none;
+                                                    }
+                                                }
+                                                .price{
+                                                    color: #cc0c09;
+                                                    font: {
+                                                        size: 16px;
+                                                        weight:500;
+                                                    }
+                                                }
+                                            }
+                                            .delete{
+                                                cursor: pointer;
+                                                display: inline;
+                                                position: absolute;
+                                                top: 0;
+                                                right: 0;
+                                                &:hover{
+                                                    color: #cc0c09;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .checkout-box-cart{
+                                align-items: flex-end;
+                                display: flex;
+                                justify-content: space-between;
+                                padding: 10px;
+
+                                .total{
+                                    text-align: left;
+                                    .total-money{
+                                        color: #cc0c09;
+                                        font: {
+                                            size: 18px;
+                                            weight:500;
+                                        }
+                                    }
+                                }
+                                .btn-checkout{
+                                    .btn-check-box{
+                                        color: #ffffff;
+                                        text-transform: uppercase;
+                                        background-color: #000000;
+                                        
+                                        &:hover{
+                                            background-color: #cc0c09;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
 
@@ -2833,6 +3002,7 @@ footer {
     }
 
 }
+
 #back-to-top.show-top {
     opacity: 1;
 }
