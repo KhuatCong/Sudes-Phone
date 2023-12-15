@@ -1802,6 +1802,11 @@ header .category-header .list-category .category .hover-item-menu .box-phukien l
 .content-body .box-bread .breadcrumb .active {
   color: red;
 }
+.content-body .content-login .form-login {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 15px;
+  border-radius: 5px;
+}
 .content-body .content-cart .title {
   font-size: 20px;
   margin-bottom: 20px;
