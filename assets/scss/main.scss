@@ -2439,8 +2439,9 @@ header {
     .content-login{
         .form-login{
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            padding: 15px;
+            padding: 20px;
             border-radius: 5px;
+            margin: 30px 0;
 
             .title{
                 text-transform: uppercase;
@@ -2452,28 +2453,123 @@ header {
                 margin-bottom: 20px;
             }
             .form{
-                .btn-login{
-                    background-color: #000000;
-                    color: #ffffff;
-                    text-transform: uppercase;
-                    &:hover{
-                        background-color: #cc0c09;
+                .login{
+                    input:focus{
+                        outline: none;
                     }
-                }
-                .btn-khac{
-                    display: flex;
-                    justify-content: space-between;
-                    margin-top: 10px;
-
-
-                    .link-f{
-                        color: #000000;
-
+                    .btn-login{
+                        background-color: #000000;
+                        color: #ffffff;
+                        text-transform: uppercase;
                         &:hover{
-                            color: #cc0c09;
+                            background-color: #cc0c09;
+                        }
+                    }
+                    .btn-khac{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 10px;
+    
+                        .quenmk{
+                            cursor: pointer;
+                            &:hover{
+                                color: #cc0c09;
+                            }
+                        }
+                        .link-f{
+                            color: #000000;
+    
+                            &:hover{
+                                color: #cc0c09;
+                            }
                         }
                     }
                 }
+                .pass{
+                    // margin: 20px 0;
+                    .btn-pass{
+                        margin-top: 15px;
+                        background-color: #000000;
+                        color: #ffffff;
+                        &:hover{
+                            background-color: #cc0c09;
+                        }
+                    }
+                }
+            }
+            .or{
+                text-align: center;
+                margin: 10px 0 20px 0;
+            }
+            .btn-or{
+                display: flex;
+                justify-content: center;
+
+                a{
+                    margin: 0 4px;
+                }
+                
+
+            }
+        }
+    }
+
+    .content-register{
+        .form-register{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+
+            .title{
+                text-transform: uppercase;
+                text-align: center;
+                font: {
+                    size: 20px;
+                    weight:400;
+                }
+                margin-bottom: 20px;
+            }
+            .title-sub{
+                text-align: center;
+                margin-bottom: 10px;
+                a{
+                    color: #000000;
+
+                    &:hover{
+                        color: #cc0c09;
+                    }
+                }
+            }
+            .form{
+                .register{
+                    input:focus{
+                        outline: none;
+                    }
+                    .btn-register{
+                        background-color: #000000;
+                        color: #ffffff;
+                        &:hover{
+                            background-color: #cc0c09;
+                        }
+                    }
+                    
+                }
+                
+            }
+            .or{
+                text-align: center;
+                margin: 10px 0 20px 0;
+            }
+            .btn-or{
+                display: flex;
+                justify-content: center;
+
+                a{
+                    margin: 0 4px;
+                }
+                
+
             }
         }
     }

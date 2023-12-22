@@ -565,15 +565,26 @@
                         <div class="form-login">
                             <div class="title">Đăng nhập</div>
                             <div class="form">
-                                <form action="">
-                                    <input type="email" class="form-control mb-3" placeholder="Email">
-                                    <input type="password" class="form-control mb-3" placeholder="Mật khẩu">
+                                <form action="" class="login">
+                                    <input type="email" class="form-control mb-3 no-out" placeholder="Email">
+                                    <input type="password" class="form-control mb-3 no-out" placeholder="Mật khẩu">
                                     <button class="btn w-100 btn-login">Đăng nhập</button>
                                     <div class="btn-khac">
-                                        <a class="link-f" href="forgotpass.html">Quên mật khẩu?</a>
+                                        <p class="quenmk" data-bs-toggle="collapse" data-bs-target="#form-pass">Quên mật khẩu?</p>
                                         <a class="link-f" href="register.html">Đăng ký tại đây</a>
                                     </div>
                                 </form>
+                                <form action="" class="pass collapse" id="form-pass">
+                                    <input type="email" name="" id="" placeholder="email" class="form-control">
+                                    <button type="submit" class="btn w-100 btn-pass">Lấy lại mật khẩu</button>
+                                </form>
+                            </div>
+                            <div class="or">
+                                hoặc đăng nhập qua
+                            </div>
+                            <div class="btn-or">
+                                <a href=""><img width="129px" height="37px" alt="facebook-login-button" src="//bizweb.dktcdn.net/assets/admin/images/login/fb-btn.svg"></a>
+                                <a href=""><img width="129px" height="37px" alt="google-login-button" src="//bizweb.dktcdn.net/assets/admin/images/login/gp-btn.svg"></a>
                             </div>
                         </div>
                     </div>
